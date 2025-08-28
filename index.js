@@ -1,6 +1,6 @@
 const { AoiClient } = require('aoi.js');
 const bot = new AoiClient({
-  token: 'YOUR_BOT_TOKEN',
+  token: 'MTQxMDUzMDMwOTM2MzIwODIxMw.GKob7V.UCZKSn1hueR67LH377ob_luPui1dgRFEzje5qI',
   prefix: '!',
   intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MEMBERS'],
 });
