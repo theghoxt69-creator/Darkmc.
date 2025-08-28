@@ -1,0 +1,9 @@
+{
+  "name": "kick",
+  "description": "Kick a user from the server.",
+  "type": "command",
+  "usage": "!kick @user [reason]",
+  "permissions": "ADMINISTRATOR",
+  "code": "$suppressErrors\n$deletecommand\n$if[$isBot[$mentioned[1]]==true;{delete:1}{description:You cannot kick a bot!}{color:RED}]\n$if[$isUser [$mentioned[1]]==false;{delete:1}{description:User  not found!}{color:RED}]\n$kick[$mentioned[1];$noMentionMessage]\n$dm[$mentioned[1];You have been kicked from **$serverName** for: $noMentionMessage]\n$embed[{title:User  Kicked}{description:$username[$mentioned[1]] has been kicked!}{color:RED}]\n$reaction[✅]",
+  "cooldown": 5
+}

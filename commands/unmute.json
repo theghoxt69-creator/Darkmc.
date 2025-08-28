@@ -1,0 +1,9 @@
+{
+  "name": "unmute",
+  "description": "Unmute a user in the server.",
+  "type": "command",
+  "usage": "!unmute @user",
+  "permissions": "ADMINISTRATOR",
+  "code": "$suppressErrors\n$deletecommand\n$if[$isBot[$mentioned[1]]==true;{delete:1}{description:You cannot unmute a bot!}{color:RED}]\n$if[$isUser [$mentioned[1]]==false;{delete:1}{description:User  not found!}{color:RED}]\n$unmute[$mentioned[1]]\n$embed[{title:User  Unmuted}{description:$username[$mentioned[1]] has been unmuted!}{color:GREEN}]\n$reaction[✅]",
+  "cooldown": 5
+}

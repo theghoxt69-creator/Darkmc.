@@ -1,0 +1,9 @@
+{
+  "name": "mute",
+  "description": "Mute a user in the server.",
+  "type": "command",
+  "usage": "!mute @user [reason]",
+  "permissions": "ADMINISTRATOR",
+  "code": "$suppressErrors\n$deletecommand\n$if[$isBot[$mentioned[1]]==true;{delete:1}{description:You cannot mute a bot!}{color:RED}]\n$if[$isUser [$mentioned[1]]==false;{delete:1}{description:User  not found!}{color:RED}]\n$mute[$mentioned[1];$noMentionMessage]\n$embed[{title:User  Muted}{description:$username[$mentioned[1]] has been muted!}{color:RED}]\n$reaction[✅]",
+  "cooldown": 5
+}

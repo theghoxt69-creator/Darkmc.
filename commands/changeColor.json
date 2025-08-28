@@ -1,0 +1,9 @@
+{
+  "name": "changeColor",
+  "description": "Change the color of a role.",
+  "type": "command",
+  "usage": "!changeColor @role [color]",
+  "permissions": "ADMINISTRATOR",
+  "code": "$suppressErrors\n$deletecommand\n$if[$roleExists[$mentioned[1]]==false;{delete:1}{description:Role not found!}{color:RED}]\n$editRole[$mentioned[1];color;$message[2]]\n$embed[{title:Role Color Changed}{description:The color of $roleName[$mentioned[1]] has been changed!}{color:GREEN}]\n$reaction[✅]",
+  "cooldown": 5
+}

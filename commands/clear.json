@@ -1,0 +1,9 @@
+{
+  "name": "clear",
+  "description": "Clear a number of messages from the channel.",
+  "type": "command",
+  "usage": "!clear [number]",
+  "permissions": "ADMINISTRATOR",
+  "code": "$suppressErrors\n$deletecommand\n$clear[$message[1]]\n$embed[{title:Messages Cleared}{description:Cleared $message[1] messages!}{color:GREEN}]\n$reaction[✅]",
+  "cooldown": 5
+}
